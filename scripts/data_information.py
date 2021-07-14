@@ -47,7 +47,7 @@ class DataInfo:
         '''a function to check for missing values count and percentage missing'''
     
         count_missing = self.df.isnull().sum() # calculate total sum of missing data
-        count_missing_percentage= round((self.df.isnull().sum()*100/len(self.df))) # multiply sum of missing data by 100 and                     divide by length of the whole data and round up 
+        count_missing_percentage= round((self.df.isnull().sum()*100/len(self.df))) # multiply sum of missing data by 100 and divide by length of the whole data and round up 
         missing_column_name= self.df.columns 
         missing_df=pd.DataFrame(zip(count_missing,count_missing_percentage,missing_column_name),
                            columns=['Missing Count', '%Missing', 'ColumnName']) # create a dataframe 
