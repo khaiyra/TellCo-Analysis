@@ -11,9 +11,9 @@ class DataInfo:
         return value
     
     def get_no_datapoints(self):
-        value = self.df.shape
-        print(f' There are {value[0]} rows and {value[1]} columns presnet in this data')
-        return value
+        #value = self.df.shape
+        print(f' There are {self.df.shape[0]} rows and {self.df.shape[1]} columns presnet in this data')
+        return
  
     def get_column_names(self):
         print('Columns in the data are: ')
@@ -29,23 +29,22 @@ class DataInfo:
     def get_total_missing_values(self):
         missing = self.df.isnull().sum().sum()
         print(f'The number of missing value(s): {missing}')
-        return missing
+        return
     
     def get_percentage_missing_values(self):
         total_cells = np.product(self.df.shape) # calculate total number of cells in dataframe
         total_missing_count = self.df.isnull().sum().sum() # calculate total number of missing values
         # calculate percentage missing
         print('There are', round(((total_missing_count/total_cells) * 100), 2), '%', 'missing values.')
-        return total_missing_count
+        return
     
     def get_missing_columns(self):
-        missing_columns = self.df.columns[data.isnull().any()]
+        missing_columns = self.df.columns[self.df.isnull().any()]
         print(f'Columns having missing value(s): {missing_columns}')
-        return missing_columns
+        return
     
     def get_percentage_missing_columns(self):
-    '''
-    a function to check for missing values count and percentage missing'''
+        '''a function to check for missing values count and percentage missing'''
     
         count_missing = self.df.isnull().sum() # calculate total sum of missing data
         count_missing_percentage= round((self.df.isnull().sum()*100/len(self.df))) # multiply sum of missing data by 100 and                     divide by length of the whole data and round up 
