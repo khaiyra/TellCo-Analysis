@@ -1,6 +1,6 @@
 # TellCo Data Analysis
 
-Task 1 fotr the 10 academy week1 training
+Task 1 of the 10 academy week1 training
 
 
 ## Project Overview
