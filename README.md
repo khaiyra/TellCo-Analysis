@@ -14,5 +14,3 @@ Analysis on the User overview of Tellco communication company. The goal of this 
 * Notebooks- all notebooks used are stored in this folder.
 * Scripts- contains scripts.
 
-### Steps/ Approaches
-
